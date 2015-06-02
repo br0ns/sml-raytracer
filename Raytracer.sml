@@ -156,6 +156,7 @@ val lights = [(1.0, normalize (0.0, ~0.5, 1.0))]
 
 val res = 600
 
+(*
 val disp = MosGame.Display.create_display (res, res)
 val _ =
     RenderSDL.render
@@ -167,15 +168,16 @@ val _ =
        resolution = res,
        subsampling = 1}
 val _ = MosGame.Display.flip disp
+*)
 
-(* val disp = Image.create (res, res) Color.Black *)
-(* val disp = *)
-(*     RenderBMP.render *)
-(*       disp *)
-(*       {raytracer = raytracer, *)
-(*        scene = mkScene 3, *)
-(*        lights = lights, *)
-(*            ambience = 0.0, *)
-(*        resolution = res, *)
-(*        subsampling = 1} *)
-(* val _ = Image.view "eog" disp *)
+val disp = Image.create (res, res) Color.Black
+val disp =
+    RenderBMP.render
+      disp
+      {raytracer = raytracer,
+       scene = mkScene 3,
+       lights = lights,
+           ambience = 0.0,
+       resolution = res,
+       subsampling = 1}
+val _ = Image.view "feh" disp

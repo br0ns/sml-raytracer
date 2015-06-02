@@ -1,3 +1,4 @@
+(*
 structure RenderSDL =
 RenderFn (
 open MosGame
@@ -7,3 +8,4 @@ fun setPixel disp c p = (
   ; MosGame.Event.clear MosGame.Event.AllEvents
 )
 )
+*)

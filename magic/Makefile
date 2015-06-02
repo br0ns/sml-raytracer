@@ -9,7 +9,9 @@ all:
       loadmessage.sml \
       > Magic.sml
 	mosmlc -c -P full \
-     MyLib.ui MyLib.uo \
-     MosGame.ui MosGame.uo \
+     ../lib/MyLib.ui ../lib/MyLib.uo \
      -toplevel Magic.sml
 	rm Magic.sml
+
+clean:
+	rm Magic.ui Magic.uo
